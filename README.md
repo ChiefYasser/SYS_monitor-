@@ -1,6 +1,8 @@
 # System Monitor Dashboard
 
-A retro-styled analytics dashboard using Node.js and SQLite.
+this is just tempalte for my future projects 
+
+A retro-styled analytics dashboard using Node.js and SQLite. 
 
 ## How to Run
 
@@ -12,3 +14,6 @@ A retro-styled analytics dashboard using Node.js and SQLite.
 
 3. Open in browser:
    http://localhost:3000
+
+
+<img width="1090" height="803" alt="image" src="https://github.com/user-attachments/assets/0d776d51-7b56-40f6-b615-597401508ab7" />
