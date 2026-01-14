@@ -1,0 +1,20 @@
+# 1. Dependencies (Crucial - never commit this)
+node_modules/
+
+# 2. Database files
+# We ignore these because your server.js auto-creates them.
+# You don't want to commit your local test data.
+*.db
+*.sqlite
+backend/database.db
+
+# 3. System Files (Mac/Windows junk files)
+.DS_Store
+Thumbs.db
+
+# 4. Logs and Debugging
+*.log
+npm-debug.log
+
+# 5. Environment variables (Good practice for the future)
+.env
