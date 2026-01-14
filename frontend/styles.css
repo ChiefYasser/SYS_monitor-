@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Retro Mac Colors */
+  --bg-primary: #f5f5f0;
+  --bg-secondary: #e8e8e3;
+  --border-color: #999999;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --chart-1: #4f46e5;
+  --chart-2: #0ea5e9;
+  --chart-3: #06b6d4;
+  --chart-4: #f59e0b;
+}
+
+body {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: 32px 24px;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* Mac Window Styling */
+.mac-window {
+  border-radius: 16px;
+  border: 4px solid var(--border-color);
+  background: linear-gradient(135deg, #f9f9f6 0%, #f0f0eb 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mac-title-bar {
+  background: linear-gradient(to bottom, #d9d9d0 0%, #bebeb5 100%);
+  border-bottom: 4px solid var(--border-color);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  min-height: 32px;
+}
+
+.traffic-lights {
+  display: flex;
+  gap: 8px;
+}
+
+.mac-button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mac-button:hover {
+  transform: scale(1.15);
+}
+
+.mac-button.red {
+  background: linear-gradient(135deg, #ff5f56 0%, #e54641 100%);
+}
+
+.mac-button.yellow {
+  background: linear-gradient(135deg, #ffbd2e 0%, #d4a620 100%);
+}
+
+.mac-button.green {
+  background: linear-gradient(135deg, #27c93f 0%, #1fa932 100%);
+}
+
+.window-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1;
+  text-align: center;
+}
+
+.window-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid Layouts */
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 350px;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.grid-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Status Items */
+.status-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.percentage {
+  font-weight: 700;
+  color: var(--chart-1);
+}
+
+.progress-bar {
+  height: 16px;
+  background: linear-gradient(to bottom, #e8e8e3, #d9d9d0);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.3s ease;
+}
+
+/* Stat Cards */
+.stat-card {
+  min-height: 140px;
+}
+
+.stat-content {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.stat-change {
+  font-size: 11px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* Chart Container */
+.pie-content {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .grid-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .grid-main,
+  .grid-secondary {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-chart {
+    grid-column: 1;
+  }
+}
